@@ -113,12 +113,15 @@
             box-sizing: border-box;
             width: 100%;
         
-            background-color: #323643;
+            background-color: rgba(50, 54, 67,0.75);
             z-index: 10;
             transition: 0.25s ease-in-out;
         }
+        .NavBarTop{
+            background-color: transparent;
+        }
         .NavbarActive{
-            top: -10vh;
+            top: -12.5vh;
         }
         .navBarTop{
             display: flex;
@@ -131,7 +134,7 @@
             height: 100%;
             padding-left: 2.5vw;
             padding-right: 2.5vw;
-            height: 10vh;
+            height: 12.5vh;
         }
         
         .menuButton{
@@ -183,7 +186,7 @@
         .callContainer > div{
             margin-right: 0.25rem;
             margin-left: 0.75rem;
-            height: 40%;
+            height: 30%;
             aspect-ratio: 1;
             position: relative;
         }
@@ -201,7 +204,7 @@
 
         .contactBtn{
             margin-left: 1rem;
-            background-color:#93DEFF;
+            background-color: #36c3ff;
             border: 2px solid transparent;
             color: #323643;
             -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -212,7 +215,7 @@
 
         .contactBtn:hover{
              background-color: transparent;
-             border: 2px solid #93DEFF;
-             color: #F7F7F7;
+             border: 2px solid  #36c3ff;
+             color:  #36c3ff;
         }
         }

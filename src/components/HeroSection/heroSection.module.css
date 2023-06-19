@@ -1,0 +1,64 @@
+.HeroSection{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: relative;
+    overflow: hidden;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: #f7f7f7;
+    box-sizing: border-box;
+}
+.backgroundIMGShadow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index:-1;
+}
+
+.backgroundIMG{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    filter:blur(2px)
+}
+
+.btnWrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+.btnWrapper > button:nth-child(1){
+    background-color: #36c3ff ;
+    transition: 0.25s;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+}
+.btnWrapper > button:nth-child(1):hover{
+    background-color:#93DEFF ;
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.5);
+}
+
+.btnWrapper > button:nth-child(2){
+    background-color: transparent ;
+    border: 2px solid #36c3ff;
+    color:  #36c3ff;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    transition: 0.25s;
+}
+.btnWrapper > button:nth-child(2):hover{
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.5);
+    border: 2px dashed #93DEFF;
+    color:#93DEFF ;
+}

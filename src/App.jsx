@@ -4,6 +4,7 @@ import { useState , useEffect } from "react"
 import './App.css'
 
 import Navbar from './components/Navigation/NavBar';
+import HeroSection from './components/HeroSection/HeroSection';
 function App() {
 
   const [mobile, setMobile] = useState(window.innerWidth <= 767);
@@ -25,6 +26,7 @@ function App() {
 
       <Navbar/>
         <div className='WebsiteContent'>
+          <HeroSection/>
           <p>AAAAAAAAAA</p>
           <p>AAAAAAAAAA</p>
           <p>AAAAAAAAAA</p>

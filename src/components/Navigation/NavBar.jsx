@@ -55,14 +55,20 @@ useEffect(()=>{
     }
     if(lastScrollDown - lastScrollUp >= navBar.offsetHeight && lastScrollHeight < document.documentElement.scrollTop  && document.documentElement.scrollTop > navBar.offsetHeight ){
       navBar.classList.add(`${styles.NavbarActive}`)
-     }
+    }
+    if(document.documentElement.scrollTop < navBar.offsetHeight){
+      navBar.classList.add(styles.NavBarTop)
+    } else if (navBar.classList.contains(styles.NavBarTop)){
+      navBar.classList.remove(styles.NavBarTop)
+    }
+
     lastScrollHeight = document.documentElement.scrollTop
   })
 }
 
 },[])
   return (
-    <header className={styles.Navbar} id='NavigationBar'>
+    <header className={`${styles.Navbar} ${styles.NavBarTop}`} id='NavigationBar'>
       <div className={styles.navBarTop}>
         <button className={styles.menuButton} onClick={menuBtnHandler}>
         <div className={styles.menuButtonRow1}></div>
@@ -77,16 +83,13 @@ useEffect(()=>{
           </button>
         </div>
         {!MobileUser && (<>
-        <a>Serviciile noastre</a>
-        <a>Despre noi</a>
-        <a href="tel:+37360951369" className={styles.callContainer}>
-          <div>
-          <img src={callIconHover} />
-          <img src={callIcon} />
-          </div>
-        +37360951369</a>
+        <a>HOME</a>
+        <a>SERVICES</a>
+        <a>WORKS</a>
+        <a>ABOUT US</a>
+     
         <button className={styles.contactBtn}>
-          Contacteazăne      
+          CONTACT     
         </button>
         </>)}
 
@@ -97,3 +100,11 @@ useEffect(()=>{
 }
 
 export default Navbar
+
+/*
+   <a href="tel:+37360951369" className={styles.callContainer}>
+          <div>
+          <img src={callIconHover} />
+          <img src={callIcon} />
+          </div>
+        +37360951369</a> */
