@@ -62,7 +62,14 @@
     border: 2px dashed #93DEFF;
     color:#93DEFF ;
 }
-
+.HeroSection > h1 {
+    font-size: clamp(1rem,4vw,3.5rem);
+}
 .HeroSection > h1 > span {
     text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+    .HeroSection > h1 {
+        font-size: clamp(1rem,8vw,2.75rem);
+    }   
 }

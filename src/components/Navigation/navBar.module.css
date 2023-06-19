@@ -30,6 +30,9 @@
         padding-right: 5vw;
         height: 7.5vh;
     }
+    .NavBarTop{
+        background-color: transparent;
+    }
     
     .menuButton{
         border: none;
@@ -132,8 +135,8 @@
             justify-content: space-between;
             box-sizing: border-box;
             height: 100%;
-            padding-left: 2.5vw;
-            padding-right: 2.5vw;
+            padding-left: 5vw;
+            padding-right: 5vw;
             height: 12.5vh;
         }
         
