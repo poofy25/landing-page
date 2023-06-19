@@ -1,0 +1,218 @@
+
+@media screen and (max-width: 767px) {
+    .Navbar{
+        display: flex;
+        position:fixed;
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+    
+        box-sizing: border-box;
+        width: 100vw;
+    
+        background-color: #323643;
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    .NavbarActive{
+        top: -15vh;
+    }
+    .navBarTop{
+        display: flex;
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 100%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: 7.5vh;
+    }
+    
+    .menuButton{
+        border: none;
+        background-color: transparent;
+        height: 50%;
+        aspect-ratio: 1;
+        padding: 0;
+        position: absolute;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        left: 5vw;
+        z-index: 10;
+    }
+    
+    .menuButton > div {
+        width: 100%;
+        height: 2px;
+        background-color: #F7F7F7;
+        transition: 0.25s ease-in-out;
+    }
+    
+    .menuButton.active .menuButtonRow2 {
+     transform: translateX(-200%);
+     opacity: 0;
+    }
+    .menuButton.active .menuButtonRow1 {
+        transform: rotate(45deg);
+        transform-origin: 0 0%;
+    }
+    .menuButton.active .menuButtonRow3 {
+        transform: rotate(-45deg);
+    
+        transform-origin: 0 100%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .companyLogo{
+        margin: 0;
+        height: 100%;
+    }
+    .companyLogo > button {
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .companyLogo > button > img {
+        height: 25%;
+        filter: invert();
+        filter: brightness(10000);
+    }
+    
+}
+    
+    
+    
+    @media screen and (min-width: 768px) {
+        .Navbar{
+            display: flex;
+            position:fixed;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+        
+            box-sizing: border-box;
+            width: 100%;
+        
+            background-color: #323643;
+            z-index: 10;
+            transition: 0.25s ease-in-out;
+        }
+        .NavbarActive{
+            top: -10vh;
+        }
+        .navBarTop{
+            display: flex;
+            width: 100%;
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            height: 100%;
+            padding-left: 2.5vw;
+            padding-right: 2.5vw;
+            height: 10vh;
+        }
+        
+        .menuButton{
+         display: none;
+    
+        }
+        .menuContainer{
+            display: none;
+        }
+       
+        
+        .companyLogo{
+            margin: 0;
+            margin-right: auto;
+            height: 100%;
+        }
+        .companyLogo > button {
+            background-color: transparent;
+            border: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin-right: 1rem;
+            margin: 0;
+            cursor: pointer;
+        }
+        .companyLogo > button > img {
+             height: 25%;
+             filter: invert();
+             filter: brightness(10000);
+        }
+
+        .Navbar a  {
+           color: #F7F7F7; 
+           margin: 0 1rem 0 1rem;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: max-content;
+           height: 100%;
+           white-space: nowrap;
+           transition: 0.25s;
+        }
+        .Navbar a:hover {
+            color: #93DEFF;
+        }
+        .callContainer > div{
+            margin-right: 0.25rem;
+            margin-left: 0.75rem;
+            height: 40%;
+            aspect-ratio: 1;
+            position: relative;
+        }
+        .callContainer > div > img{
+            position: absolute;
+            height: 100%;
+            transition: 0.25s;
+        }
+        .callContainer > div > img:nth-child(2){
+           filter: invert();
+        }
+        .callContainer:hover > div > img:nth-child(2){
+            opacity: 0;
+        }
+
+        .contactBtn{
+            margin-left: 1rem;
+            background-color:#93DEFF;
+            border: 2px solid transparent;
+            color: #323643;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;  
+            transition: 0.25s;       /* Opera/IE 8+ */
+        }
+
+        .contactBtn:hover{
+             background-color: transparent;
+             border: 2px solid #93DEFF;
+             color: #F7F7F7;
+        }
+        }
