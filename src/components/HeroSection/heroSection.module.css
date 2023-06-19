@@ -62,3 +62,7 @@
     border: 2px dashed #93DEFF;
     color:#93DEFF ;
 }
+
+.HeroSection > h1 > span {
+    text-decoration: underline;
+}
