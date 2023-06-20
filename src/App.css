@@ -12,10 +12,19 @@ position: relative;
 top: 0;
 
 }
+h1{
+  font-size: clamp(1rem,7vw,2rem) !important;
+}
 }
 @media screen and (min-width: 768px) {
   .WebsiteContent{
   position: relative;
   top: 0;
   }
+  h1 {
+    font-size: clamp(1rem,4vw,3.5rem) !important;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1rem;
   }
+}

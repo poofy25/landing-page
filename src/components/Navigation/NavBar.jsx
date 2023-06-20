@@ -83,10 +83,10 @@ useEffect(()=>{
           </button>
         </div>
         {!MobileUser && (<>
-        <a>HOME</a>
-        <a>SERVICES</a>
-        <a>WORKS</a>
-        <a>ABOUT US</a>
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#works">WORKS</a>
+        <a href="#about">ABOUT US</a>
      
         <button className={styles.contactBtn}>
           CONTACT     

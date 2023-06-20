@@ -29,7 +29,7 @@ function HeroSection() {
 
     return (
     
-    <div className={styles.HeroSection}>
+    <div className={styles.HeroSection} id='home'>
 
       <h1>Creating the perfect website for your&nbsp;
 
