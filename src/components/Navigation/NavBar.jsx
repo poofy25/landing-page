@@ -78,7 +78,7 @@ useEffect(()=>{
      {MobileUser && <NavBarMenu closeMenu={menuBtnHandler}/> }
 
         <div className={styles.companyLogo}>
-          <button aria-label="Home">
+          <button>
             <img src={companyLogo} alt=''/>
           </button>
         </div>
