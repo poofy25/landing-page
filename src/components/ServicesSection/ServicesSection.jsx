@@ -1,8 +1,8 @@
 import { useEffect , useRef , useState } from 'react';
 
-import landingPageIcon from '/src/assets/Icons/landingPageIcon.png'
-import bussinessPageIcon from '/src/assets/Icons/bussinessPageIcon.png'
-import eventsPageIcon from '/src/assets/Icons/eventsPageIcon.png'
+import landingPageIcon from '/src/assets/icons/landingPageIcon.png'
+import bussinessPageIcon from '/src/assets/icons/bussinessPageIcon.png'
+import eventsPageIcon from '/src/assets/icons/eventsPageIcon.png'
 
 import styles from "./servicesSection.module.css"
 
