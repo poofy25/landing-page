@@ -12,7 +12,7 @@ function WorksCarousel() {
 
     const [currentArtNr , setArtNr] = useState(0)
     const mobile = window.innerWidth <= 767
-    const mobileArtOffset = mobile ? 2 : 3
+    const mobileArtOffset = mobile ? 1 : 3
     
     useEffect(()=>{
         Carousel = document.getElementById('carousel')
@@ -20,16 +20,11 @@ function WorksCarousel() {
         articlesNr = Carousel?.children.length
     },[])
     useEffect(()=>{
-        Carousel.style.transform = `translateY(0px)`
         Carousel.style.transform = `translateX(0px)`
+        setArtNr(0)
     },[window.innerWidth])
     useEffect(()=>{
-        console.log(currentArtNr , mobile)
-        if(!mobile){
         Carousel.style.transform = `translate(-${WorkArticelle.offsetWidth * currentArtNr}px)`
-        }else{
-            Carousel.style.transform = `translateY(-${WorkArticelle.offsetHeight * currentArtNr}px)`
-        }
     },[currentArtNr])
 
 
@@ -45,7 +40,6 @@ function WorksCarousel() {
     const forwardBtnHandler = ()=>{
         if(currentArtNr < articlesNr-mobileArtOffset){
             setArtNr(currentArtNr+1)
-        // Carousel.style.transform = `translate(-${WorkArticelle.offsetWidth * currentArticle}px)`
         }else{
             console.log('no more' , currentArtNr)
         }
