@@ -1,6 +1,7 @@
 
+import WorksCarousel from "./WorksCarousel"
+
 import styles from "./worksSection.module.css"
-import WorksCarousel from "./worksCarousel"
 
 function WorksSection() {
     return(
