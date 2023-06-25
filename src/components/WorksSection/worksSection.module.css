@@ -1,6 +1,37 @@
  
  .worksSection{
-   background-color: pink;
+   background-color:  #323643;
    width: 100%;
    height: 100vh;
+   box-sizing: border-box;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   padding-left: 5vw;
+   padding-right: 5vw;
+   position: relative;
  }
+
+ .worksSection > h1 {
+  color: #323643;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  height: 25vh;
+  background-color: #F7F7F7;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+ }
+ .worksSection > h1::before{
+     content:'';
+     width: 100%;
+     height: 25%;
+     position: absolute;
+     color: red;
+ }
+
+
+
