@@ -1,6 +1,11 @@
 
 import styles from "./worksCarousel.module.css"
 
+import ecommerce1 from '/src/assets/workImages/ecommerce1.png'
+import ecommerce2 from '/src/assets/workImages/ecommerce2.png'
+
+import portfolio11 from '/src/assets/workImages/portfolio1.1.png'
+
 import { useEffect  , useState} from "react"
 
 
@@ -52,8 +57,22 @@ function WorksCarousel() {
             <button className={styles.backwardBtn} onClick={backwardBtnHandler} id='backbtn'></button> 
             <button className={styles.forwardBtn} onClick={forwardBtnHandler} id='nextbtn'></button>
             <div className={styles.workArticles} id='carousel'>
-                <article id='workArticle'>a</article>
-                <article>b</article>
+                <article id='workArticle'>
+
+                    <p>poofy25.github.io/ecommerce</p>
+                    <h1>Ecommerce</h1>
+                    <div className={styles.workBackground}>  
+                    <img src={ecommerce1}/>
+                        <img src={ecommerce2}/>                      
+                    </div>
+                </article>
+                <article> 
+                    <p>poofy25.github.io/poofys_Portfolio</p>
+                    <h1>Portfolio</h1>
+                    <div className={styles.workBackground}>
+                        <img src={portfolio11}/>
+                        <img src={portfolio11}/>
+                    </div></article>
                 <article>c</article>
                 <article>d</article>
                 <article>e</article>
