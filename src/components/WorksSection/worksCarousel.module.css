@@ -3,10 +3,10 @@
     position: absolute;
     left: 0;
     top: 25vh;
-    height:75%;
+    height: 75%;
     background-color: rgb(49, 49, 49);
    overflow: hidden;
-  
+
 }
 
 
@@ -17,7 +17,7 @@
     justify-content: center;
     border-radius: 0;
     height: 15%;
-    width: 50%;
+    width: 50vw;
     background-color: rgba(0,0,0,0.5);
     color: #F7F7F7;
     font-size: 2rem;
@@ -51,7 +51,7 @@
     transform: rotate(45deg) !important;
 }
 .forwardBtn{
-    right: 0;
+    left: 50vw;
 }
 .forwardBtn::after{
     transform: rotate(-135deg) !important;
@@ -81,7 +81,7 @@
 
 
 .workArticles > article {
-    min-width: calc(50vw - 8px);
+    min-width: calc(50vw);
     max-width: 50vw;
     border-right: 1px solid white;
     box-sizing: border-box;
@@ -99,17 +99,25 @@
 }
 
 .workArticles > article:hover .workBackground{
-    transform: translateY(-50vh) scale(1.075);
+    transform: translateY(-50%) scale(1.5);
     opacity: 0.4;
 }
+.workArticles > article:hover > a{
+    color:aqua;
+    opacity: 1;
+    text-decoration: underline;
+}
 
-.workArticles > article > p{
+.workArticles > article > a{
   z-index: 10;
   margin-top: 25%;
   margin-bottom: 0;
-  opacity: 0.75;
+  opacity: 0.9;
   font-size: 1.25rem;
   font-weight: bold;
+  transition: 0.5s;
+  color: #F7F7F7;
+  cursor: pointer;
 }
 .workArticles > article > h1{
   z-index: 10;
@@ -125,7 +133,7 @@
     top:0;
     left: 0;
     transition: width 0.5s, all 1s;
-    cursor: pointer;
+
 }
 .workBackground{
     content:'';
@@ -140,10 +148,41 @@
 
 .workBackground > img {
      width: 100%;
+     min-height:100%;
      opacity: 0.5;
-     object-fit: contain;
+     object-fit: cover;
      object-position: top center;
     
+}
+
+
+.workPoints{
+    position: absolute;
+    bottom: 1rem;
+    width: 15%;
+    left: 42.5%;
+    aspect-ratio: 10/2;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 6px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.workPoints > span {
+    height: 50%;
+    box-sizing: border-box;
+    border-radius: 99px;
+    transition: 0.25s ease-in-out;
+    aspect-ratio: 1;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.workPoints > span.active {
+    border: 2px solid rgba(0,0,0,0.25);
+    box-shadow:0px 0px 0px 2px rgba(0,0,0,0.75) inset;
+   background-color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -159,13 +198,19 @@
         min-width: 100vw;
     }
     .backwardBtn{
-        width: 50% !important;
         height: 12.5% !important;
     } 
     .forwardBtn{
-        width: 50% !important;
         height: 12.5% !important;
     } 
+    .workArticles > article:hover .workBackground{
+        transform: translateY(-25%) scale(1.5);
+    }
+
+    .workPoints{
+        width: 30%;
+        left: 35%;
+    }
 
 }
 

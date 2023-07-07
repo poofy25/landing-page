@@ -1,6 +1,181 @@
  
  .contactSection{
-   background-color: lightyellow;
+   background-color: #323643;
    width: 100%;
-   height: 100vh;
+   min-height: 100vh;
+   color: #f7f7f7;
+   box-sizing: border-box;
+   padding-left: 5vw;
+   padding-right: 5vw;
+   padding-bottom: 2rem;
+   position: relative;
  }
+ .contactSection input {
+   box-sizing: border-box;
+ }
+ .contactSection > h1 {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0;
+
+ }
+
+ .content{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .contactInfo {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+ }
+
+ .contactInfo > a {
+  color: #f7f7f7;
+  cursor: pointer;
+  transition: 0.25s;
+  margin-bottom: 0.5rem;
+ }
+ .contactInfo > a:hover{
+   text-decoration: underline;
+   color:#36c3ff;
+ }
+
+ .content h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+ }
+
+
+ .contactForm{
+  width: 50%;
+ }
+
+ .contactForm > form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  font-weight: 500;
+ }
+
+ .formWrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+ }
+ .formWrap > div{
+  width: 45%;
+ }
+ .formWrap > div > label{
+  width: 100%;
+ }
+ .formWrap > div > input{
+  width: 100%;
+  height: 7.5vh;
+  background-color: transparent;
+  border: 2px solid rgba(247, 247, 247,0.75);
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color:#f7f7f7;
+  font-size: 1rem;
+ }
+
+ .formWrap > div > input:focus{
+  border-color: #f7f7f7;
+  background-color: rgba(0,0,0,0.25);
+ }
+
+ ::placeholder {
+  font-weight: 600;
+ }
+
+
+ form > textarea{
+  width: 100%;
+  height: 25vh;
+  resize: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid rgba(247, 247, 247,0.75);
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: #f7f7f7;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
+
+ form > textarea:focus{
+  border-color: #f7f7f7;
+  background-color: rgba(0,0,0,0.25);
+ }
+
+ .submit { 
+  align-self: flex-end;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  box-sizing: border-box;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: 'Rubik' , sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 3px;
+  box-shadow: 3px 0px 9px 3px rgba(0,0,0,0.25);
+  transition: 0.25s;
+ }
+.submit:hover {
+  box-shadow: 3px 0px 15px 6px rgba(0,0,0,0.5);
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+
+  .content{
+    flex-direction: column;
+
+  }
+
+  .contactSection > h1 {
+    justify-content: center;
+  }
+
+  .contactInfo{
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1rem;
+  }
+
+  .contactForm{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   }
+  
+   .contactForm > form {
+    justify-content: center;
+    align-items: center;
+   }
+
+
+}

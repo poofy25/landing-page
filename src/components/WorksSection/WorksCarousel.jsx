@@ -6,6 +6,8 @@ import ecommerce2 from '/src/assets/workImages/ecommerce2.png'
 
 import portfolio11 from '/src/assets/workImages/portfolio1.1.png'
 
+import game1 from '/src/assets/workImages/game1.png'
+
 import { useEffect  , useState} from "react"
 
 
@@ -17,7 +19,7 @@ function WorksCarousel() {
 
     const [currentArtNr , setArtNr] = useState(0)
     const mobile = window.innerWidth <= 767
-    const mobileArtOffset = mobile ? 1 : 3
+    const mobileArtOffset = mobile ? 1 : 2
     
     useEffect(()=>{
         Carousel = document.getElementById('carousel')
@@ -29,8 +31,25 @@ function WorksCarousel() {
         setArtNr(0)
     },[window.innerWidth])
     useEffect(()=>{
+ 
+        if(mobile && document.querySelector(`.${styles.workPoints}`).childNodes){
+          document.querySelector(`.${styles.workPoints}`).childNodes.forEach(element=>{
+            element.classList.remove(styles.active)
+          })
+          document.querySelector(`.${styles.workPoints}`).childNodes[currentArtNr].classList.add(styles.active)
+          console.log(  document.querySelector(`.${styles.workPoints}`).childNodes)
+        } else if (!mobile && document.querySelector(`.${styles.workPoints}`).childNodes) {
+            document.querySelector(`.${styles.workPoints}`).childNodes.forEach(element=>{
+                element.classList.remove(styles.active)
+            })
+            document.querySelector(`.${styles.workPoints}`).childNodes[currentArtNr].classList.add(styles.active)
+            document.querySelector(`.${styles.workPoints}`).childNodes[currentArtNr+1].classList.add(styles.active)
+        }
+
+
+
         Carousel.style.transform = `translate(-${WorkArticelle.offsetWidth * currentArtNr}px)`
-    },[currentArtNr])
+    },[currentArtNr , mobile])
 
 
     const backwardBtnHandler = ()=>{
@@ -59,23 +78,52 @@ function WorksCarousel() {
             <div className={styles.workArticles} id='carousel'>
                 <article id='workArticle'>
 
-                    <p>poofy25.github.io/ecommerce</p>
+                    <a href='https://poofy25.github.io/ecommerce' target="_blank">poofy25.github.io/ecommerce</a>
                     <h1>Ecommerce</h1>
                     <div className={styles.workBackground}>  
                     <img src={ecommerce1}/>
                         <img src={ecommerce2}/>                      
                     </div>
+
                 </article>
+
                 <article> 
-                    <p>poofy25.github.io/poofys_Portfolio</p>
+
+                    <a href='https://poofy25.github.io/ecommerce' target="_blank">poofy25.github.io/poofys_Portfolio</a>
                     <h1>Portfolio</h1>
                     <div className={styles.workBackground}>
                         <img src={portfolio11}/>
                         <img src={portfolio11}/>
-                    </div></article>
-                <article>c</article>
-                <article>d</article>
-                <article>e</article>
+                    </div>
+
+                </article>
+
+                <article>
+
+                    <a>poofy25.github.io/case-simulator</a>
+                    <h1>Game</h1>
+                    <div className={styles.workBackground}>
+                        <img src={game1}/>
+                    </div>
+
+                </article>
+
+                <article>
+
+                    <a>poofy25.github.io/dorians-website</a>
+                    <h1>Portfolio</h1>
+                    <div className={styles.workBackground}>
+                        <img src={portfolio11}/>
+                        <img src={portfolio11}/>
+                    </div>
+
+                </article>
+            </div>
+            <div className={styles.workPoints}>
+                <span onClick={()=>setArtNr(0)}></span>
+                <span onClick={()=>setArtNr(1)}></span>
+                <span onClick={()=>setArtNr(2)}></span>
+                <span onClick={()=>{if(!mobile){setArtNr(2)}else{setArtNr(3)}}}></span>
             </div>
         </div>
     )

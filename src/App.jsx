@@ -30,6 +30,7 @@ function App() {
 
         <Navbar/>
         <div className='WebsiteContent'>
+          <div className='websiteBackground'></div>
           <HeroSection/>
           <ServicesSection/>
           <WorksSection/>

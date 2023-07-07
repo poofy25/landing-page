@@ -12,7 +12,7 @@ function ServicesSection() {
 
     return(
         <div id='services' className={styles.servicesSection}>
-            <div className={styles.servicesSectionBackground}></div>
+
             <h1>SERVICES</h1>
 
             <div className={styles.servicesWrapper}>
@@ -20,14 +20,14 @@ function ServicesSection() {
                     <img src={landingPageIcon}/>
                     <div>
                       <p>Lading Page</p>
-                      A well-designed landing page can drive conversions, boost sales, and ultimately contribute to the owner's business success.
+                      A well-designed landing page can drive conversions, boost sales, and contribute to the owner's business success.
                     </div>
                 </div>
                 <div>
                     <img src={bussinessPageIcon}/>
                     <div>
                     <p>Events website</p>
-                    An online platform that showcases event information, and provides essential event details to enhance event planning, promotion, and attendee experience.
+                    An online platform that showcases event information, and provides essential event details promotion, and attendee experience.
                     </div>
                 </div>
                 <div>
@@ -35,12 +35,12 @@ function ServicesSection() {
                     <img src={eventsPageIcon}/>
                     <div>
                     <p>Bussiness Site</p>
-                    An online platform that represents a company or organization, providing a digital presence to showcase products, services, and information, facilitate customer engagement, and support business growth.
+                    An online platform that represents a company or organization, providing a digital presence to showcase products, services, and information, and support business growth.
                     </div>
                 </div>
                 
             </div>
-            <span style={{textDecoration:'underline'}}>AND OTHER</span>
+            <span style={{textDecoration:'underline' , marginTop:'1rem'}}>AND OTHER</span>
         </div>
     )
 }
