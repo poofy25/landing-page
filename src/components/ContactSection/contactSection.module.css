@@ -124,6 +124,11 @@
   background-color: rgba(0,0,0,0.25);
  }
 
+ form > label {
+  width: 100%;
+  
+ }
+
  .submit { 
   align-self: flex-end;
   background-color: #f7f7f7;
@@ -176,6 +181,15 @@
     justify-content: center;
     align-items: center;
    }
+
+   .formWrap {
+    flex-direction: column;
+   }
+
+   .formWrap > div{
+    width: 100%;
+   }
+
 
 
 }
