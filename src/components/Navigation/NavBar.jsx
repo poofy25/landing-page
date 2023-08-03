@@ -2,8 +2,6 @@
 import { useEffect , lazy } from "react";
 
 import companyLogo from '/src/assets/icons/companyLogo.png'
-import callIcon from '/src/assets/icons/callIcon.png'
-import callIconHover from '/src/assets/icons/callIconHover.png'
 
 import NavBarMenu from "./NavBarMenu";
 
@@ -77,20 +75,18 @@ useEffect(()=>{
         </button>
      {MobileUser && <NavBarMenu closeMenu={menuBtnHandler}/> }
 
-        <div className={styles.companyLogo}>
-          <button>
+          <a href="#home" className={styles.companyLogo}>
             <img src={companyLogo} alt=''/>
-          </button>
-        </div>
+          </a>
         {!MobileUser && (<>
         <a href="#home">HOME</a>
         <a href="#services">SERVICES</a>
         <a href="#works">WORKS</a>
         <a href="#about">ABOUT US</a>
      
-        <button className={styles.contactBtn}>
+        <a href="#contact" className={styles.contactBtn}>
           CONTACT     
-        </button>
+        </a>
         </>)}
 
   

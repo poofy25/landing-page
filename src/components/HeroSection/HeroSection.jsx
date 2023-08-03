@@ -43,7 +43,7 @@ function HeroSection() {
 
    
 
-      <div className={styles.btnWrapper}> <button>CONTACT US</button> <button>OUR SERVICES</button> </div>
+      <div className={styles.btnWrapper}> <a href='#contact'>CONTACT US</a> <a href="#services">OUR SERVICES</a> </div>
       <div className={styles.backgroundIMGShadow}></div>
       <img src={backgroundIMG} className={styles.backgroundIMG}/>
     

@@ -1,11 +1,15 @@
 
 
 import styles from "./contactSection.module.css"
-
+import bgAnimation from "./BackgroundAnimation"
 import { useEffect } from "react"
 
 function ContactSection() {
 
+
+    useEffect(()=>{
+     
+    },[])
 
     return(
         <div id='contact' className={styles.contactSection}>
