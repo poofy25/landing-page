@@ -1,6 +1,6 @@
  
  .contactSection{
-   background-color: #323643;
+   
    width: 100%;
    min-height: 100vh;
    color: #f7f7f7;
@@ -10,6 +10,18 @@
    padding-bottom: 2rem;
    position: relative;
  }
+
+
+
+ .canvas{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: rgba(50, 54, 67);
+}
  .contactSection input {
    box-sizing: border-box;
  }
@@ -40,10 +52,19 @@
   cursor: pointer;
   transition: 0.25s;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
  .contactInfo > a:hover{
    text-decoration: underline;
    color:#36c3ff;
+ }
+ .contactInfo > a > img {
+  width: 2rem; 
+  margin-right: 1rem;
+  aspect-ratio: 1;
+  filter:invert();
  }
 
  .content h2 {
@@ -81,7 +102,7 @@
  .formWrap > div > input{
   width: 100%;
   height: 7.5vh;
-  background-color: transparent;
+  background-color:  rgba(50, 54, 67);
   border: 2px solid rgba(247, 247, 247,0.75);
   border-radius: 3px;
   padding-left: 1rem;
@@ -107,7 +128,7 @@
   height: 25vh;
   resize: none;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color:  rgba(50, 54, 67);
   border: 2px solid rgba(247, 247, 247,0.75);
   border-radius: 3px;
   padding-left: 1rem;
@@ -151,6 +172,9 @@
 
 
 
+
+
+
 @media screen and (max-width: 767px) {
 
 
@@ -165,15 +189,15 @@
 
   .contactInfo{
    width: 100%;
-   justify-content: center;
-   align-items: center;
+   justify-content: start;
+   align-items: start;
    margin-bottom: 1rem;
   }
 
   .contactForm{
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     display: flex;
     flex-direction: column;
    }
