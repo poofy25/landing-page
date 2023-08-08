@@ -44,7 +44,7 @@ function ContactSection() {
         canvas.width = W;
         canvas.height = H;
 
-        var fontSize = 16;
+        var fontSize = 8;
         var columns = Math.floor(W / fontSize);
         var drops = [];
         for(var i=0; i<columns; i++){
@@ -57,6 +57,7 @@ function ContactSection() {
             context.fontSize = "700 " + fontSize + "px";
             context.fillStyle = "rgba(54, 195, 255,0.25)";
             for(var i=0; i<columns; i++){
+
                 var index = Math.floor(Math.random()*str.length);
                 var x = i * fontSize;
                 var y = drops[i] * fontSize;
