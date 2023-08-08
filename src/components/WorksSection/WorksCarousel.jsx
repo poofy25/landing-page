@@ -78,22 +78,20 @@ function WorksCarousel() {
             <div className={styles.workArticles} id='carousel'>
                 <article id='workArticle'>
 
-                    <a href='https://poofy25.github.io/ecommerce' target="_blank">poofy25.github.io/ecommerce</a>
+                    <a href='https://poofy25.github.io/online-shop' target="_blank">poofy25.github.io/online-shop</a>
                     <h1>Ecommerce</h1>
                     <div className={styles.workBackground}>  
-                    <img src={ecommerce1}/>
-                        <img src={ecommerce2}/>                      
+                                  
                     </div>
 
                 </article>
 
                 <article> 
 
-                    <a href='https://poofy25.github.io/ecommerce' target="_blank">poofy25.github.io/poofys_Portfolio</a>
+                    <a href='https://poofy25.github.io/online-shop' target="_blank">poofy25.github.io/poofys_Portfolio</a>
                     <h1>Portfolio</h1>
                     <div className={styles.workBackground}>
-                        <img src={portfolio11}/>
-                        <img src={portfolio11}/>
+                       
                     </div>
 
                 </article>
@@ -103,7 +101,7 @@ function WorksCarousel() {
                     <a>poofy25.github.io/case-simulator</a>
                     <h1>Game</h1>
                     <div className={styles.workBackground}>
-                        <img src={game1}/>
+                        
                     </div>
 
                 </article>
@@ -113,8 +111,7 @@ function WorksCarousel() {
                     <a>poofy25.github.io/dorians-website</a>
                     <h1>Portfolio</h1>
                     <div className={styles.workBackground}>
-                        <img src={portfolio11}/>
-                        <img src={portfolio11}/>
+                        
                     </div>
 
                 </article>
